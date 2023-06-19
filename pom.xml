@@ -53,23 +53,13 @@
         </dependency>
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>gitlab-maven</id>
-            <url>${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/maven</url>
-        </repository>
-    </repositories>
-    <distributionManagement>
-        <repository>
-            <id>gitlab-maven</id>
-            <url>${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/maven</url>
-        </repository>
-        <snapshotRepository>
-            <id>gitlab-maven</id>
-            <url>${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/maven</url>
-        </snapshotRepository>
-    </distributionManagement>
-
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/octocat/hello-world</url>
+    </repository>
+  </distributionManagement>
 
     <build>
         <finalName>${project.name}##${project.version}</finalName>
