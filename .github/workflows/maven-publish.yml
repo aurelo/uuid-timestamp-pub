@@ -7,12 +7,13 @@ on:
   push:
     branches:
       - main
-    tags: 
-      - v**
+#    tags: 
+#      - v**
     paths:
       - '**.java'
       - '**.yml'
       - '**.properties'
+      - '**.xml'
   release:
     types: [created]
 
