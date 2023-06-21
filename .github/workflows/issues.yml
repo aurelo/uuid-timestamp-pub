@@ -3,7 +3,7 @@ name: On issues
 on: 
   issues:
     types:
-      - created
+      - opened
   
 jobs:
   display_issue_context:
