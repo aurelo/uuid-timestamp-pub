@@ -1,0 +1,12 @@
+name: On issues
+
+on: 
+  issues:
+    types:
+      - created
+  
+jobs:
+  display_issue_context:
+    runs-on: ubuntu-latest
+    steps:
+       - run: echo " ${{ issues }}"
