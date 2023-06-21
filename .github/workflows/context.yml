@@ -6,4 +6,23 @@ jobs:
   info:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello world"
+      - name: Simple echo
+        run: echo "Hello world"
+        
+      - name: display content of current dir
+        run: ls -al
+        
+      - name: prove existance of docker runtime
+        run: docker -v
+        
+        
+  context_info:
+    runs-on: ubuntu-latest
+    steps:
+        
+      - name: display info about current execution context
+        run: echo ${{ toJson(github) }}
+        
+      - name: display info about current runner
+        run: echo ${{ toJson(runner) }}
+      
