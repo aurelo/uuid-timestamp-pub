@@ -1,0 +1,16 @@
+name: manual workflow with input
+
+on:
+  workflow_dispatch:
+    inputs:
+      envName:
+        description: environment name
+        required: true
+        
+jobs:
+  display_input:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: display input
+        run: echo "${{github.event.inputs.envName}}"
