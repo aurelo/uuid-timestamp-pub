@@ -15,8 +15,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: 'maven'
-      - name: Get tags
-        run: git fetch --tags origin
+          fetch-depth: 0 # include all history and tags
+#      - name: Get tags
+#        run: git fetch --tags origin
       - run: |
           mvn validate
           mvn test
